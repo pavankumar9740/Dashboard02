@@ -31,5 +31,4 @@ jobs:
           !dist/**/*.md
         app-name: 'dashboard ui'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_6ca07e4effd94bad8d839eb0f1bba52d }}
-        package: .
+        
