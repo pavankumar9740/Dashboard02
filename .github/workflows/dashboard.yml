@@ -26,8 +26,8 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
        name: dist-without-markdown
-        path: |
-            dist
-            !dist/**/*.md
+       path: |
+          dist
+          !dist/**/*.md
        
        
