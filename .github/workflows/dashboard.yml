@@ -22,13 +22,9 @@ jobs:
         npm run build --if-present
         npm run test --if-present
 
-    - name: 'Deploy to Azure Web App'
-      uses: azure/webapps-deploy@v2
-      with:
-        name: dist-without-markdown
+    - name: dist-without-markdown
         path: |
           dist
           !dist/**/*.md
-        app-name: 'dashboard ui'
-        slot-name: 'production'
-        
+       
+       
