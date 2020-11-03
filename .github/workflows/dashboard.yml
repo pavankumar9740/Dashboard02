@@ -26,7 +26,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
        name: dist
-       path: |
+       path: C:\Users\Pavan\Documents\GitHub\Dashboard02
           dist
           !dist/**/*.md
        
