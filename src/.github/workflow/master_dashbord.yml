@@ -1,0 +1,35 @@
+name: Build and deploy dashboard ui
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Set up Node.js version
+      uses: actions/setup-node@v1
+     
+
+    - name: npm install, build, and test
+      run: |
+        npm install
+        npm run build --if-present
+        npm run test --if-present
+
+    - name: 'Deploy to Azure Web App'
+      uses: azure/webapps-deploy@v2
+      with:
+        name: dist-without-markdown
+        path: |
+          dist
+          !dist/**/*.md
+        app-name: 'dashboard ui'
+        slot-name: 'production'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_6ca07e4effd94bad8d839eb0f1bba52d }}
+        package: .
