@@ -14,6 +14,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
+      
 
     - name: Set up Node.js version
       uses: actions/setup-node@v1
@@ -25,14 +26,14 @@ jobs:
     - name: Archive production 
       uses: actions/upload-artifact@v2
       with:
-       name: dist
-       path: |
-        dist
+       name: my_artifact
+       path: path/to/artifact
         
-    - name: Download all Artifacts
-      uses: ./
-      with:
-        path: some/other/path
+    - name: Display structure of downloaded files
+      run: ls -R
+      working-directory: path/to/artifact
+        
+   
        
          
            
