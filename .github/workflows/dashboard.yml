@@ -15,11 +15,20 @@ jobs:
           npm test
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
-        if: failure()
+        
+        with:
+         name: dist
+         path: |
+           dist
+         
+      - name: 'Tar files'
+        run: tar -cvf my_files.tar /path/to/my/directory
+
+      - name: 'Upload '
+        uses: actions/upload-artifact@v2
         with:
          name: my-artifact
-         path: path/to/artifact/
-    
+         path: my_files.tar        
      
             
       
