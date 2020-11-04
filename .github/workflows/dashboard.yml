@@ -21,7 +21,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
        name: dist-without-markdown
-       path: |
+       path: ${{ github.workspace }}/artifact/**/*
          dist
          !dist/**/*.md   
 
