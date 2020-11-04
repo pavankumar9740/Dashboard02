@@ -26,8 +26,8 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
        name: dist
-       path:  some/dist/new
-          dist
+       path:  |
+          Dashboard02/dist
           !dist/**/*.md
        
        
