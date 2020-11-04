@@ -21,9 +21,10 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
        name: dist-without-markdown
-       path: ${{ github.workspace }}/artifact/**/*
-         dist
-         !dist/**/*.md   
+       path: |
+         mkdir -p path/to/dist
+         echo "dist" > path/to/dist/dist.zip
+           
 
     
        
