@@ -16,16 +16,11 @@ jobs:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: dist-without-markdown
-          path: |
-            dist
-            !dist/**/*.md
+          name: my-artifact
+          path: path/to/artifact/
+          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn` 
     
-      - name: 'Upload artifact #3'
-        uses: ./
-        with:
-         name: 'Zip-Artifact'
-         path: path/to/dir-3/    
+     
             
       
       
