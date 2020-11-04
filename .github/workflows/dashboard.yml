@@ -28,7 +28,7 @@ jobs:
        name: dist
        path: |
          dist
-         ${{ github.workspace }}\dist.zip
+         /Dashboard02/dist.zip
           !dist/**/*.md
        
        
