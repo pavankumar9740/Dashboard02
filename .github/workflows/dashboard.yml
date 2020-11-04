@@ -15,10 +15,10 @@ jobs:
           npm test
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
+        if: failure()
         with:
-          name: my-artifact
-          path: path/to/artifact/
-          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn` 
+         name: my-artifact
+         path: path/to/artifact/
     
      
             
