@@ -26,7 +26,8 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
        name: ${{ env.name }}-name
-       path: ${{ github.workspace }}/artifact/**/*
+       path: |
+        ${{ github.workspace }}/artifact/**/*
        
        
          
