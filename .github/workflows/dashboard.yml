@@ -7,7 +7,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-     uses:./dist
+     
      
     env:
       name: my-artifact
