@@ -26,8 +26,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
        name: dist
-       path:  |
-          Dashboard02/dist
+       path: ${{ github.workspace }}/dist.zip
           !dist/**/*.md
        
        
