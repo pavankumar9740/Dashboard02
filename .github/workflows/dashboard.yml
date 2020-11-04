@@ -35,6 +35,12 @@ jobs:
       with:
         name: 'Artifact-A'
         path: path/to/artifact-A
+        
+    - name: Download artifact A
+      uses: ./
+      with:
+        name: 'Artifact-A'
+        path: some/new/path
     
        
          
