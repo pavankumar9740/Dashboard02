@@ -24,10 +24,12 @@ jobs:
       - name: Checks out dist
         uses: actions/checkout@v2
         with:
-          repository: pavankumar9740/Dashboard02
           path: |
             dist
             
+      - name: Display the path
+        run: echo $PATH
+        shell: bash     
               
          
        
