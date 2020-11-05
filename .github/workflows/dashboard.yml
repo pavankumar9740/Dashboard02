@@ -20,15 +20,15 @@ jobs:
           npm install
           npm run build --if-present
           npm test
-      - name: Archive production artifacts
-        uses: 'actions/upload-artifact@v2'
-      - run: mkdir -p path/to/artifact
-      - run: echo dist > path/to/artifact/dist
-
-      - uses: actions/upload-artifact@v2
+          
+      - name: Checks out dist
+        uses: actions/checkout@v2
         with:
-         name: my-artifact
-         path: path/to/artifact/dist
+          repository: Dashboard/Dashboard
+          ref: refs/heads/master
+          path: |
+            dist
+            
               
          
        
