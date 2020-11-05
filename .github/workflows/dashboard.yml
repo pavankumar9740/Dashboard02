@@ -1,6 +1,13 @@
 name: Node CI
 
-on: [push]
+on:
+  push:
+    branches: 
+      - master
+  pull_request:
+    branches: 
+      - master
+
 
 jobs:
   build_and_test:
@@ -16,8 +23,9 @@ jobs:
       - name: Archive production artifacts
         uses: 'actions/upload-artifact@v2'
         with:
-              name: my-artifact ${{ matrix.node-version }}
-              path: ${{ github.workspace }}
+            path: |
+              dist
+              
          
        
             
