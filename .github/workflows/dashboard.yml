@@ -24,7 +24,7 @@ jobs:
       - name: Checks out dist
         uses: actions/checkout@v2
         with:
-          repository: Dashboard/Dashboard
+          repository: Dashboard02/Dashboard02
           ref: refs/heads/master
           path: |
             dist
