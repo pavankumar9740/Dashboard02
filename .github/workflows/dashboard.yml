@@ -22,9 +22,13 @@ jobs:
           npm test
       - name: Archive production artifacts
         uses: 'actions/upload-artifact@v2'
+      - run: mkdir -p path/to/artifact
+      - run: echo dist > path/to/artifact/dist
+
+      - uses: actions/upload-artifact@v2
         with:
-            path: |
-              dist
+         name: my-artifact
+         path: path/to/artifact/dist
               
          
        
