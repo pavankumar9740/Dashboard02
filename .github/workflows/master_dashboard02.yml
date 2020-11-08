@@ -31,9 +31,10 @@ jobs:
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
+        path: |
+          dist
         app-name: 'dashboard02'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_061ae61f6fc64d538255219ff24816cb }}
         package: .
-        path: |
-          dist
+        
