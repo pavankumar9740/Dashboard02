@@ -26,6 +26,8 @@ jobs:
         with:
           path: |
             dist
+      - name: Artifact folder
+        uses: https://github.com/pavankumar9740/Dashboard02
             
       
               
