@@ -23,11 +23,12 @@ jobs:
           
       - name: Checks out dist
         uses: actions/checkout@v2
+      - name: Use local my-action
+        uses: ./.github/actions/my-action
         with:
           path: |
             dist
-      - name: Artifact folder
-        uses: https://github.com/pavankumar9740/Dashboard02
+      
             
       
               
